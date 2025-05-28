@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: product
-          image: 'rafaelaafferri/product-service:latest'
+          image: rafaelaafferri/product-service:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
