@@ -39,12 +39,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: order
+  name: product
   labels:
-    app: order
+    app: product
 spec:
   type: ClusterIP
   ports:
     - port: 8080
   selector:
-    app: order
+    app: product

@@ -3,6 +3,7 @@ import java.util.List;
 import java.util.stream.StreamSupport;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -16,6 +17,7 @@ public class ProductService {
         return productRepository.save(new ProductModel(product)).to();
     }
 
+    @Cacheable("productId")
     public Product findById(String id) {
         return productRepository.findById(id).get().to();
     }
